@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it } from "vitest";
 
-import { listPosts } from "@/lib/data/posts";
+import { getPostById, listPosts } from "@/lib/data/posts";
 import { getStore, resetStoreForTests } from "@/lib/data/store";
 
 describe("listPosts", () => {
@@ -43,5 +43,23 @@ describe("listPosts", () => {
   it("returns an empty collection when there are no posts", () => {
     getStore().posts.length = 0;
     expect(listPosts()).toEqual([]);
+  });
+});
+
+describe("getPostById", () => {
+  it("returns a public detail DTO for an existing post", () => {
+    const post = getPostById("post-welcome");
+
+    expect(post).toMatchObject({
+      id: "post-welcome",
+      authorName: "데모 사용자",
+      title: "Codex Board에 오신 것을 환영합니다",
+    });
+    expect(post?.content).toContain("생각과 질문");
+    expect(post).not.toHaveProperty("authorId");
+  });
+
+  it("returns null for an unknown post", () => {
+    expect(getPostById("missing-post")).toBeNull();
   });
 });
