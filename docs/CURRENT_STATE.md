@@ -29,7 +29,7 @@ Runnable Next.js 16 App Router application with TypeScript, ESLint, Vitest, in-m
 - HTTP smoke checks verified seeded comments, empty state, and anonymous comment login link rendering.
 
 ## In Progress
-- Comment list validation and PR workflow on `feature/comment-list`.
+- Comment list PR #5 CI and merge workflow.
 
 ## BLOCKED
 None.
@@ -38,11 +38,11 @@ None.
 None.
 
 ## Next Action
-Complete and merge the comment list, then implement authenticated post creation with server-side 401 enforcement.
+Check and merge comment list PR #5, then implement authenticated post creation with server-side 401 enforcement.
 
 ## Feature / PR History
 - PR #1 `chore/bootstrap` — squash-merged; typecheck, lint, 2 unit tests, build, and HTTP smoke check passed; no required CI checks configured.
 - PR #2 `feature/authentication` — squash-merged; typecheck, lint, 12 tests, build, dependency audit, and browser authentication flow passed; no required CI checks configured.
 - PR #3 `feature/post-list` — squash-merged; typecheck, lint, 15 tests, build, and browser list flow passed; no required CI checks configured.
 - PR #4 `feature/post-detail` — squash-merged; typecheck, lint, 17 tests, build, and HTTP 200/404 checks passed; no required CI checks configured.
-- `feature/comment-list` — implementation complete; final validation and PR pending.
+- PR #5 `feature/comment-list` — implementation and local validation complete; CI/merge pending.
