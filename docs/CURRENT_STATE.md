@@ -18,9 +18,12 @@ Runnable Next.js 16 App Router application with TypeScript, ESLint, Vitest, in-m
 - Bootstrap PR #1 squash-merged to `main`; merged branch removed locally and remotely.
 - Authentication implementation includes credential verification, signed HttpOnly session cookies, safe return destinations, login/logout UI, and a server-only authorization DAL.
 - Browser flow verified invalid login feedback, successful login, session persistence after reload, and logout.
+- Authentication PR #2 squash-merged to `main`; merged branch removed locally and remotely.
+- Public post list implemented with seeded content, newest-first ordering, safe author DTOs, creation dates, comment counts, responsive empty state, and detail links.
+- Browser flow verified public list rendering and anonymous write intent redirect to login with `/posts/new` return destination.
 
 ## In Progress
-- Authentication PR #2 CI and merge workflow.
+- Post list PR #3 CI and merge workflow.
 
 ## BLOCKED
 None.
@@ -29,8 +32,9 @@ None.
 None.
 
 ## Next Action
-Check and merge authentication PR #2, then implement the public post list.
+Check and merge post list PR #3, then implement public post detail and comment display.
 
 ## Feature / PR History
 - PR #1 `chore/bootstrap` — squash-merged; typecheck, lint, 2 unit tests, build, and HTTP smoke check passed; no required CI checks configured.
-- PR #2 `feature/authentication` — implementation and local validation complete; CI/merge pending.
+- PR #2 `feature/authentication` — squash-merged; typecheck, lint, 12 tests, build, dependency audit, and browser authentication flow passed; no required CI checks configured.
+- PR #3 `feature/post-list` — implementation and local validation complete; CI/merge pending.
