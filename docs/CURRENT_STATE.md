@@ -26,7 +26,7 @@ Runnable Next.js 16 App Router application with TypeScript, ESLint, Vitest, in-m
 - HTTP smoke checks verified an existing detail returns 200 with content and an unknown ID returns 404.
 
 ## In Progress
-- Post detail validation and PR workflow on `feature/post-detail`.
+- Post detail PR #4 CI and merge workflow.
 
 ## BLOCKED
 None.
@@ -35,10 +35,10 @@ None.
 None.
 
 ## Next Action
-Complete and merge post detail, then implement the public comment list.
+Check and merge post detail PR #4, then implement the public comment list.
 
 ## Feature / PR History
 - PR #1 `chore/bootstrap` — squash-merged; typecheck, lint, 2 unit tests, build, and HTTP smoke check passed; no required CI checks configured.
 - PR #2 `feature/authentication` — squash-merged; typecheck, lint, 12 tests, build, dependency audit, and browser authentication flow passed; no required CI checks configured.
 - PR #3 `feature/post-list` — squash-merged; typecheck, lint, 15 tests, build, and browser list flow passed; no required CI checks configured.
-- `feature/post-detail` — implementation complete; final validation and PR pending.
+- PR #4 `feature/post-detail` — implementation and local validation complete; CI/merge pending.
