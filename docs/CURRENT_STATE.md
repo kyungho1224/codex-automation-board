@@ -23,7 +23,7 @@ Runnable Next.js 16 App Router application with TypeScript, ESLint, Vitest, in-m
 - Browser flow verified public list rendering and anonymous write intent redirect to login with `/posts/new` return destination.
 
 ## In Progress
-- Post list validation and PR workflow on `feature/post-list`.
+- Post list PR #3 CI and merge workflow.
 
 ## BLOCKED
 None.
@@ -32,9 +32,9 @@ None.
 None.
 
 ## Next Action
-Complete and merge the post list, then implement public post detail and comment display.
+Check and merge post list PR #3, then implement public post detail and comment display.
 
 ## Feature / PR History
 - PR #1 `chore/bootstrap` — squash-merged; typecheck, lint, 2 unit tests, build, and HTTP smoke check passed; no required CI checks configured.
 - PR #2 `feature/authentication` — squash-merged; typecheck, lint, 12 tests, build, dependency audit, and browser authentication flow passed; no required CI checks configured.
-- `feature/post-list` — implementation complete; final validation and PR pending.
+- PR #3 `feature/post-list` — implementation and local validation complete; CI/merge pending.
