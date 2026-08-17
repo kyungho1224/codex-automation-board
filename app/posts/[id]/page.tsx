@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
 import { AuthStatus } from "@/app/auth-status";
+import { CommentLoginPrompt } from "@/app/posts/[id]/comment-login-prompt";
+import { listCommentsForPost } from "@/lib/data/comments";
 import { getPostById } from "@/lib/data/posts";
 
 type PostPageProps = {
@@ -26,6 +28,7 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
 export default async function PostPage({ params }: PostPageProps) {
   const { id } = await params;
   const post = getPostById(id);
+  const comments = listCommentsForPost(id);
 
   if (!post) {
     notFound();
@@ -60,6 +63,35 @@ export default async function PostPage({ params }: PostPageProps) {
           </header>
           <div className="post-body">{post.content}</div>
         </article>
+
+        <section className="comments" aria-labelledby="comments-title">
+          <div className="comments-heading">
+            <h2 id="comments-title">댓글</h2>
+            <span>{comments.length}</span>
+          </div>
+
+          {comments.length > 0 ? (
+            <ol className="comment-list">
+              {comments.map((comment) => (
+                <li key={comment.id}>
+                  <div className="comment-meta">
+                    <strong>{comment.authorName}</strong>
+                    <time dateTime={comment.createdAt.toISOString()}>
+                      {dateFormatter.format(comment.createdAt)}
+                    </time>
+                  </div>
+                  <p>{comment.content}</p>
+                </li>
+              ))}
+            </ol>
+          ) : (
+            <div className="comment-empty">아직 댓글이 없습니다. 첫 댓글을 남겨 보세요.</div>
+          )}
+
+          <Suspense fallback={null}>
+            <CommentLoginPrompt postId={post.id} />
+          </Suspense>
+        </section>
       </div>
     </main>
   );
