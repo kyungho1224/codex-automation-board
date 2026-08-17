@@ -20,7 +20,7 @@ npm run dev
 - 이메일: `demo@example.com`
 - 비밀번호: `demo-password`
 
-로컬 `.env.local`에서 `TEST_USER_EMAIL`, `TEST_USER_PASSWORD`, `AUTH_SECRET`을 설정해 기본값을 덮어쓸 수 있습니다. `.env.local`은 Git에서 제외됩니다.
+로컬 `.env.local`에서 `TEST_USER_EMAIL`, `TEST_USER_PASSWORD`, `AUTH_SECRET`을 설정해 기본값을 덮어쓸 수 있습니다. `.env.local`은 Git에서 제외됩니다. `AUTH_SECRET`은 배포 환경에서 32자 이상의 무작위 값으로 반드시 설정해야 합니다.
 
 ## 검증
 
