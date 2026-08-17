@@ -17,16 +17,16 @@ Runnable Next.js 16 App Router application with TypeScript, ESLint, Vitest, and 
 - Typecheck, lint, unit test, production build, and development-server HTTP smoke check pass.
 
 ## In Progress
-- Bootstrap branch commit, push, PR, CI, and merge workflow.
+- Bootstrap PR #1 CI and merge workflow.
 
 ## BLOCKED
-- Automated PR creation/checking: GitHub CLI is not installed. Direct Git push is available; PR capability will be reassessed after push.
+None.
 
 ## Pending Questions
 None.
 
 ## Next Action
-Commit and push bootstrap, complete the PR/merge workflow where available, then implement authentication and server-side authorization as the first feature unit.
+Check and merge bootstrap PR #1, then implement authentication and server-side authorization as the first feature unit.
 
 ## Feature / PR History
-- `chore/bootstrap` — local implementation complete; PR pending.
+- PR #1 `chore/bootstrap` — implementation and local validation complete; CI/merge pending.
