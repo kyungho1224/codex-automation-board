@@ -42,6 +42,37 @@ body {
   box-shadow: 0 1.5rem 4rem rgb(65 57 41 / 10%);
 }
 
+.site-header,
+.auth-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-header {
+  margin-bottom: clamp(3rem, 8vw, 6rem);
+}
+
+.brand {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.1rem;
+}
+
+.auth-status {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.auth-status form {
+  display: contents;
+}
+
+.auth-placeholder {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
 .eyebrow {
   margin: 0 0 1rem;
   color: var(--accent);
@@ -66,4 +97,114 @@ h1 {
   color: var(--muted);
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   line-height: 1.75;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.1rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.button.primary {
+  color: white;
+  background: var(--accent);
+}
+
+.button.secondary {
+  color: var(--foreground);
+  border-color: var(--border);
+  background: transparent;
+}
+
+.auth-card {
+  width: min(100%, 32rem);
+  padding: clamp(2rem, 6vw, 4rem);
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  background: var(--surface);
+  box-shadow: 0 1.5rem 4rem rgb(65 57 41 / 10%);
+}
+
+.auth-card h1 {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 3rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.auth-form {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.auth-form label {
+  margin-top: 0.5rem;
+  font-weight: 700;
+}
+
+.auth-form input {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  color: var(--foreground);
+  background: white;
+  font: inherit;
+}
+
+.auth-form input:focus {
+  border-color: var(--accent);
+  outline: 3px solid rgb(29 105 83 / 15%);
+}
+
+.form-message {
+  min-height: 1.5rem;
+  margin: 0.25rem 0;
+  color: #a2382c;
+  font-size: 0.9rem;
+}
+
+.demo-account {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  color: var(--muted);
+  background: var(--background);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 35rem) {
+  .shell {
+    padding: 1rem;
+  }
+
+  .hero,
+  .auth-card {
+    border-radius: 1rem;
+  }
+
+  .auth-status > span {
+    display: none;
+  }
 }
