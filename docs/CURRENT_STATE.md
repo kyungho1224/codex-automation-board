@@ -27,9 +27,10 @@ Runnable Next.js 16 App Router application with TypeScript, ESLint, Vitest, in-m
 - Post detail PR #4 squash-merged to `main`; merged branch removed locally and remotely.
 - Public comment list implemented with oldest-first safe DTOs, author/content/date display, responsive empty state, and exact anonymous login guidance with post return destination.
 - HTTP smoke checks verified seeded comments, empty state, and anonymous comment login link rendering.
+- Comment list PR #5 squash-merged to `main`; merged branch is ready for cleanup.
 
 ## In Progress
-- Comment list PR #5 CI and merge workflow.
+None.
 
 ## BLOCKED
 None.
@@ -38,11 +39,11 @@ None.
 None.
 
 ## Next Action
-Check and merge comment list PR #5, then implement authenticated post creation with server-side 401 enforcement.
+Implement authenticated post creation with required title/content validation, direct-route login return, post-create detail redirect, and a route handler that returns 401 for anonymous writes.
 
 ## Feature / PR History
 - PR #1 `chore/bootstrap` — squash-merged; typecheck, lint, 2 unit tests, build, and HTTP smoke check passed; no required CI checks configured.
 - PR #2 `feature/authentication` — squash-merged; typecheck, lint, 12 tests, build, dependency audit, and browser authentication flow passed; no required CI checks configured.
 - PR #3 `feature/post-list` — squash-merged; typecheck, lint, 15 tests, build, and browser list flow passed; no required CI checks configured.
 - PR #4 `feature/post-detail` — squash-merged; typecheck, lint, 17 tests, build, and HTTP 200/404 checks passed; no required CI checks configured.
-- PR #5 `feature/comment-list` — implementation and local validation complete; CI/merge pending.
+- PR #5 `feature/comment-list` — squash-merged; typecheck, lint, 19 tests, build, and HTTP comment/empty/guidance checks passed; no required CI checks configured.
