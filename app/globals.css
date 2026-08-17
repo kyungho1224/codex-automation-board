@@ -185,6 +185,35 @@ body {
   color: var(--muted);
 }
 
+.detail-shell {
+  width: min(100%, 58rem);
+  margin: 0 auto;
+}
+
+.post-detail h1 {
+  max-width: 16ch;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  line-height: 1.08;
+}
+
+.detail-meta {
+  margin-top: 1.5rem;
+}
+
+.post-body {
+  margin-top: clamp(3rem, 8vw, 6rem);
+  padding: clamp(2rem, 5vw, 4rem) 0;
+  border-block: 1px solid var(--border);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  line-height: 1.9;
+  white-space: pre-wrap;
+}
+
+.not-found-card .button {
+  margin-top: 2rem;
+}
+
 .eyebrow {
   margin: 0 0 1rem;
   color: var(--accent);
