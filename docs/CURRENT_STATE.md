@@ -20,7 +20,7 @@ Runnable Next.js 16 App Router application with TypeScript, ESLint, Vitest, in-m
 - Browser flow verified invalid login feedback, successful login, session persistence after reload, and logout.
 
 ## In Progress
-- Authentication feature validation and PR workflow on `feature/authentication`.
+- Authentication PR #2 CI and merge workflow.
 
 ## BLOCKED
 None.
@@ -29,8 +29,8 @@ None.
 None.
 
 ## Next Action
-Complete and merge the authentication feature, then implement the public post list.
+Check and merge authentication PR #2, then implement the public post list.
 
 ## Feature / PR History
 - PR #1 `chore/bootstrap` — squash-merged; typecheck, lint, 2 unit tests, build, and HTTP smoke check passed; no required CI checks configured.
-- `feature/authentication` — implementation complete; final validation and PR pending.
+- PR #2 `feature/authentication` — implementation and local validation complete; CI/merge pending.
